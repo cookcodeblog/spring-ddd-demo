@@ -1,0 +1,15 @@
+spring:
+  sql:
+    init:
+      platform: mysql
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/orderdb
+    username: springuser
+    password: test123
+server:
+  shutdown: graceful
